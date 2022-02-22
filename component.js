@@ -1,10 +1,20 @@
-import { useState } from './drewery.js'
+import { useState, useEffect, useMemo } from './drewery.js'
 
 
-export default function Component({ propCount }) {
+export default function Component({ propCount, buttonElem }) {
     const [count, setCount] = useState(0)
     const [sdf, sdf] = useState(0)
-    const propCountDoubled = 0
+    const propCountDoubled = useMemo(() => {
+        console.log("in memo")
+        return propCount * 2
+    }, [propCount])
+
+    useEffect(() => {
+        const handler = () => setCount(currentCount => currentCount + 1)
+        buttonElem.addEventListener('click', handler)
+
+        return () => buttonElem.removeEventListener('click', handler)
+    }, [buttonElem]) 
 
     return `
     State: ${count}
