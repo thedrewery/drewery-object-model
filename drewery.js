@@ -85,7 +85,7 @@ return (() => {
     })()
 }
 
-export function render(component, props, parent) {
+export function render (component, props, parent) {
     const state = componentState.get(parent) || { cache: [] }
     componentState.set(parent, { ...state, component, props })
     globalParent = parent

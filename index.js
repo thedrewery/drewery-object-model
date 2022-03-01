@@ -1,11 +1,14 @@
 import { render } from './drewery.js'
-import Component from './Component.js'
+import Component from './component.js'
 
 let propCount = 0
 document.getElementById('btn-prop').addEventListener('click', () => {
     propCount++ 
+    console.log(Component)
+    console.log("mad props!")
     renderComponent()
 })
+
 
 function renderComponent() {
     render(Component, { propCount, buttonElem: document.getElementById('btn-count') }, document.getElementById("root"))

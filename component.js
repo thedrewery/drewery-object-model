@@ -11,7 +11,7 @@ export default function Component({ propCount, buttonElem }) {
     useEffect(() => {
         const handler = () => setCount(currentCount => currentCount + 1)
         buttonElem.addEventListener('click', handler)
-
+        console.log("in useEffect")
         return () => buttonElem.removeEventListener('click', handler)
     }, [buttonElem]) 
 
