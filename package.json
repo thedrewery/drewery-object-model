@@ -1,0 +1,12 @@
+{
+  "name": "drewery-object-model",
+  "source": ["index.html", "component.js", "index.js", "drewery.js"],
+  "browserslist": "",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
+}
