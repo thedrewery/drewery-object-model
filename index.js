@@ -1,5 +1,5 @@
-import { render } from './drewery.js'
-import Component from './component.js'
+import { render } from './Drewery.js'
+import Component from './Component.js'
 
 let propCount = 0
 document.getElementById('btn-prop').addEventListener('click', () => {

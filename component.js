@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from './drewery.js'
+import { useState, useEffect, useMemo } from './Drewery.js'
 
 
 export default function Component({ propCount, buttonElem }) {
